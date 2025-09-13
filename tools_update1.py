@@ -8,6 +8,10 @@ from langchain_core.tools import tool
 from apify_client import ApifyClient
 from typing import List, Dict, Optional
 
+APIFY_API_1 = os.environ.get("APIFY_API_1")
+APIFY_API_2 = os.environ.get("APIFY_API_2")
+APIFY_API_3 = os.environ.get("APIFY_API_3")
+
 # ==================== ICS 生成函数 ====================
 def generate_ics_content(plan_text: str, start_date: datetime = None) -> bytes:
     """
