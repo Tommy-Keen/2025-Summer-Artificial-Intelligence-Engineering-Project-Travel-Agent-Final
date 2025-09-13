@@ -6,4 +6,6 @@ langchain
 langchain_openai
 langchain-community
 apify_client
-langchain-mcp-adapters langgraph "langchain[openai]"
+langchain-mcp-adapters
+langgraph
+"langchain[openai]"
