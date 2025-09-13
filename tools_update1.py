@@ -8,9 +8,9 @@ from langchain_core.tools import tool
 from apify_client import ApifyClient
 from typing import List, Dict, Optional
 
-APIFY_API_1 = os.environ.get("APIFY_API_1")
-APIFY_API_2 = os.environ.get("APIFY_API_2")
-APIFY_API_3 = os.environ.get("APIFY_API_3")
+apify_api_1 = os.environ.get("APIFY_API_1")
+apify_api_2 = os.environ.get("APIFY_API_2")
+apify_api_3 = os.environ.get("APIFY_API_3")
 
 # ==================== ICS 生成函数 ====================
 def generate_ics_content(plan_text: str, start_date: datetime = None) -> bytes:
@@ -110,7 +110,7 @@ def search_google_maps(query: str, location: str = None, max_results: int = 5) -
     # 获取 Apify API token
     try:
         # 初始化 ApifyClient
-        client = ApifyClient(APIFY_API_1)
+        client = ApifyClient(apify_api_1)
         
         # 准备 Actor 输入
         run_input = {
@@ -186,7 +186,7 @@ def search_weather(location: str, time_frame: str = "today", units: str = "metri
     
     try:
         # 初始化 ApifyClient
-        client = ApifyClient(APIFY_API_2)
+        client = ApifyClient(apify_api_2)
 
         # 准备 Actor 输入
         run_input = {
@@ -243,7 +243,7 @@ def search_flights(
     """
 
     try:
-        client = ApifyClient(APIFY_API_3)
+        client = ApifyClient(apify_api_3)
 
         run_input = {
             "market": market,
