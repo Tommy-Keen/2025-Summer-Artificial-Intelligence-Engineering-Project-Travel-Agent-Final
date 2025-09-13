@@ -8,4 +8,4 @@ langchain-community
 apify_client
 langchain-mcp-adapters
 langgraph
-"langchain[openai]"
+langchain[openai]
