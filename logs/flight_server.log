@@ -1,0 +1,271 @@
+2025-09-11 20:49:43,596 - root - INFO - [main.py:201] - Flight Ticket MCP Server logging initialized - Level: INFO, Debug: False
+2025-09-11 20:49:43,596 - root - INFO - [main.py:202] - Log files location: C:\Users\31313\Desktop\2025ShortSemesterProject\logs
+2025-09-11 20:49:43,597 - root - INFO - [main.py:203] - Log configuration - Max size: 10MB, Backup count: 5
+2025-09-11 20:49:43,597 - flight_ticket_mcp_server.main - INFO - [main.py:309] - Flight Ticket MCP Server 启动中... 传输协议: stdio
+2025-09-11 20:49:43,597 - flight_ticket_mcp_server.main - INFO - [main.py:216] - 开始注册MCP工具...
+2025-09-11 20:49:43,603 - flight_ticket_mcp_server.main - INFO - [main.py:285] - MCP工具注册完成 - 已注册工具: searchFlightRoutes, getCurrentDate, getTransferFlightsByThreePlace, getWeatherByLocation, getWeatherByCity, getFlightInfo, getFlightStatus, getAirportFlights, getFlightsInArea, trackMultipleFlights
+2025-09-11 20:49:43,603 - flight_ticket_mcp_server.main - INFO - [main.py:314] - 所有工具注册成功
+2025-09-11 20:49:43,603 - flight_ticket_mcp_server.main - INFO - [main.py:319] - 启动stdio传输协议...
+2025-09-11 20:49:43,639 - flight_ticket_mcp_server.main - ERROR - [main.py:352] - 服务器启动失败: [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\flight_ticket_mcp_server\main.py", line 320, in run_server
+    mcp.run()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\fastmcp\server\server.py", line 378, in run
+    anyio.run(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\anyio\_core\_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\anyio\_backends\_asyncio.py", line 2316, in run
+    return runner.run(wrapper())
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\anyio\_backends\_asyncio.py", line 2304, in wrapper
+    return await func(*args)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\fastmcp\server\server.py", line 353, in run_async
+    await self.run_stdio_async(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\fastmcp\server\server.py", line 1487, in run_stdio_async
+    log_server_banner(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\fastmcp\utilities\cli.py", line 235, in log_server_banner
+    console.print(Group("\n", panel, "\n"))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\rich\console.py", line 1697, in print
+    with self:
+         ^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\rich\console.py", line 870, in __exit__
+    self._exit_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\rich\console.py", line 826, in _exit_buffer
+    self._check_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\rich\console.py", line 2038, in _check_buffer
+    self._write_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\rich\console.py", line 2074, in _write_buffer
+    legacy_windows_render(buffer, LegacyWindowsTerm(self.file))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\rich\_windows_renderer.py", line 19, in legacy_windows_render
+    term.write_text(text)
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\MZVCGDt0RNHgG5PWN36RE\Lib\site-packages\rich\_win32_console.py", line 402, in write_text
+    self.write(text)
+OSError: [Errno 9] Bad file descriptor
+2025-09-11 21:14:33,479 - root - INFO - [main.py:201] - Flight Ticket MCP Server logging initialized - Level: INFO, Debug: False
+2025-09-11 21:14:33,480 - root - INFO - [main.py:202] - Log files location: C:\Users\31313\Desktop\2025ShortSemesterProject\logs
+2025-09-11 21:14:33,480 - root - INFO - [main.py:203] - Log configuration - Max size: 10MB, Backup count: 5
+2025-09-11 21:14:33,480 - flight_ticket_mcp_server.main - INFO - [main.py:309] - Flight Ticket MCP Server 启动中... 传输协议: stdio
+2025-09-11 21:14:33,481 - flight_ticket_mcp_server.main - INFO - [main.py:216] - 开始注册MCP工具...
+2025-09-11 21:14:33,490 - flight_ticket_mcp_server.main - INFO - [main.py:285] - MCP工具注册完成 - 已注册工具: searchFlightRoutes, getCurrentDate, getTransferFlightsByThreePlace, getWeatherByLocation, getWeatherByCity, getFlightInfo, getFlightStatus, getAirportFlights, getFlightsInArea, trackMultipleFlights
+2025-09-11 21:14:33,490 - flight_ticket_mcp_server.main - INFO - [main.py:314] - 所有工具注册成功
+2025-09-11 21:14:33,491 - flight_ticket_mcp_server.main - INFO - [main.py:319] - 启动stdio传输协议...
+2025-09-11 21:19:21,364 - root - INFO - [main.py:201] - Flight Ticket MCP Server logging initialized - Level: INFO, Debug: False
+2025-09-11 21:19:21,365 - root - INFO - [main.py:202] - Log files location: C:\Users\31313\Desktop\2025ShortSemesterProject\logs
+2025-09-11 21:19:21,365 - root - INFO - [main.py:203] - Log configuration - Max size: 10MB, Backup count: 5
+2025-09-11 21:19:21,365 - flight_ticket_mcp_server.main - INFO - [main.py:309] - Flight Ticket MCP Server 启动中... 传输协议: stdio
+2025-09-11 21:19:21,365 - flight_ticket_mcp_server.main - INFO - [main.py:216] - 开始注册MCP工具...
+2025-09-11 21:19:21,371 - flight_ticket_mcp_server.main - INFO - [main.py:285] - MCP工具注册完成 - 已注册工具: searchFlightRoutes, getCurrentDate, getTransferFlightsByThreePlace, getWeatherByLocation, getWeatherByCity, getFlightInfo, getFlightStatus, getAirportFlights, getFlightsInArea, trackMultipleFlights
+2025-09-11 21:19:21,371 - flight_ticket_mcp_server.main - INFO - [main.py:314] - 所有工具注册成功
+2025-09-11 21:19:21,371 - flight_ticket_mcp_server.main - INFO - [main.py:319] - 启动stdio传输协议...
+2025-09-11 21:19:21,413 - flight_ticket_mcp_server.main - ERROR - [main.py:352] - 服务器启动失败: [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\flight_ticket_mcp_server\main.py", line 320, in run_server
+    mcp.run()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\fastmcp\server\server.py", line 378, in run
+    anyio.run(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\anyio\_core\_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\anyio\_backends\_asyncio.py", line 2316, in run
+    return runner.run(wrapper())
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\anyio\_backends\_asyncio.py", line 2304, in wrapper
+    return await func(*args)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\fastmcp\server\server.py", line 353, in run_async
+    await self.run_stdio_async(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\fastmcp\server\server.py", line 1487, in run_stdio_async
+    log_server_banner(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\fastmcp\utilities\cli.py", line 235, in log_server_banner
+    console.print(Group("\n", panel, "\n"))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\rich\console.py", line 1697, in print
+    with self:
+         ^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\rich\console.py", line 870, in __exit__
+    self._exit_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\rich\console.py", line 826, in _exit_buffer
+    self._check_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\rich\console.py", line 2038, in _check_buffer
+    self._write_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\rich\console.py", line 2074, in _write_buffer
+    legacy_windows_render(buffer, LegacyWindowsTerm(self.file))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\rich\_windows_renderer.py", line 19, in legacy_windows_render
+    term.write_text(text)
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\lIPPWtxKxcm6oqqxXB0ta\Lib\site-packages\rich\_win32_console.py", line 402, in write_text
+    self.write(text)
+OSError: [Errno 9] Bad file descriptor
+2025-09-11 21:26:13,115 - root - INFO - [main.py:201] - Flight Ticket MCP Server logging initialized - Level: INFO, Debug: False
+2025-09-11 21:26:13,116 - root - INFO - [main.py:202] - Log files location: C:\Users\31313\Desktop\2025ShortSemesterProject\logs
+2025-09-11 21:26:13,116 - root - INFO - [main.py:203] - Log configuration - Max size: 10MB, Backup count: 5
+2025-09-11 21:26:13,116 - flight_ticket_mcp_server.main - INFO - [main.py:309] - Flight Ticket MCP Server 启动中... 传输协议: stdio
+2025-09-11 21:26:13,116 - flight_ticket_mcp_server.main - INFO - [main.py:216] - 开始注册MCP工具...
+2025-09-11 21:26:13,122 - flight_ticket_mcp_server.main - INFO - [main.py:285] - MCP工具注册完成 - 已注册工具: searchFlightRoutes, getCurrentDate, getTransferFlightsByThreePlace, getWeatherByLocation, getWeatherByCity, getFlightInfo, getFlightStatus, getAirportFlights, getFlightsInArea, trackMultipleFlights
+2025-09-11 21:26:13,122 - flight_ticket_mcp_server.main - INFO - [main.py:314] - 所有工具注册成功
+2025-09-11 21:26:13,122 - flight_ticket_mcp_server.main - INFO - [main.py:319] - 启动stdio传输协议...
+2025-09-11 21:26:13,172 - flight_ticket_mcp_server.main - ERROR - [main.py:352] - 服务器启动失败: [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\flight_ticket_mcp_server\main.py", line 320, in run_server
+    mcp.run()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\fastmcp\server\server.py", line 378, in run
+    anyio.run(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\anyio\_core\_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\anyio\_backends\_asyncio.py", line 2316, in run
+    return runner.run(wrapper())
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\anyio\_backends\_asyncio.py", line 2304, in wrapper
+    return await func(*args)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\fastmcp\server\server.py", line 353, in run_async
+    await self.run_stdio_async(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\fastmcp\server\server.py", line 1487, in run_stdio_async
+    log_server_banner(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\fastmcp\utilities\cli.py", line 235, in log_server_banner
+    console.print(Group("\n", panel, "\n"))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\rich\console.py", line 1697, in print
+    with self:
+         ^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\rich\console.py", line 870, in __exit__
+    self._exit_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\rich\console.py", line 826, in _exit_buffer
+    self._check_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\rich\console.py", line 2038, in _check_buffer
+    self._write_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\rich\console.py", line 2074, in _write_buffer
+    legacy_windows_render(buffer, LegacyWindowsTerm(self.file))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\rich\_windows_renderer.py", line 19, in legacy_windows_render
+    term.write_text(text)
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\jpLRCI58f7W-VLGLgBE4I\Lib\site-packages\rich\_win32_console.py", line 402, in write_text
+    self.write(text)
+OSError: [Errno 9] Bad file descriptor
+2025-09-11 21:33:23,955 - root - INFO - [main.py:201] - Flight Ticket MCP Server logging initialized - Level: INFO, Debug: False
+2025-09-11 21:33:23,956 - root - INFO - [main.py:202] - Log files location: C:\Users\31313\Desktop\2025ShortSemesterProject\logs
+2025-09-11 21:33:23,956 - root - INFO - [main.py:203] - Log configuration - Max size: 10MB, Backup count: 5
+2025-09-11 21:33:23,956 - flight_ticket_mcp_server.main - INFO - [main.py:309] - Flight Ticket MCP Server 启动中... 传输协议: stdio
+2025-09-11 21:33:23,956 - flight_ticket_mcp_server.main - INFO - [main.py:216] - 开始注册MCP工具...
+2025-09-11 21:33:23,965 - flight_ticket_mcp_server.main - INFO - [main.py:285] - MCP工具注册完成 - 已注册工具: searchFlightRoutes, getCurrentDate, getTransferFlightsByThreePlace, getWeatherByLocation, getWeatherByCity, getFlightInfo, getFlightStatus, getAirportFlights, getFlightsInArea, trackMultipleFlights
+2025-09-11 21:33:23,965 - flight_ticket_mcp_server.main - INFO - [main.py:314] - 所有工具注册成功
+2025-09-11 21:33:23,966 - flight_ticket_mcp_server.main - INFO - [main.py:319] - 启动stdio传输协议...
+2025-09-11 21:39:07,338 - root - INFO - [main.py:201] - Flight Ticket MCP Server logging initialized - Level: INFO, Debug: False
+2025-09-11 21:39:07,338 - root - INFO - [main.py:202] - Log files location: C:\Users\31313\Desktop\2025ShortSemesterProject\logs
+2025-09-11 21:39:07,339 - root - INFO - [main.py:203] - Log configuration - Max size: 10MB, Backup count: 5
+2025-09-11 21:39:07,339 - flight_ticket_mcp_server.main - INFO - [main.py:309] - Flight Ticket MCP Server 启动中... 传输协议: stdio
+2025-09-11 21:39:07,339 - flight_ticket_mcp_server.main - INFO - [main.py:216] - 开始注册MCP工具...
+2025-09-11 21:39:07,348 - flight_ticket_mcp_server.main - INFO - [main.py:285] - MCP工具注册完成 - 已注册工具: searchFlightRoutes, getCurrentDate, getTransferFlightsByThreePlace, getWeatherByLocation, getWeatherByCity, getFlightInfo, getFlightStatus, getAirportFlights, getFlightsInArea, trackMultipleFlights
+2025-09-11 21:39:07,349 - flight_ticket_mcp_server.main - INFO - [main.py:314] - 所有工具注册成功
+2025-09-11 21:39:07,349 - flight_ticket_mcp_server.main - INFO - [main.py:319] - 启动stdio传输协议...
+2025-09-11 21:39:07,389 - flight_ticket_mcp_server.main - ERROR - [main.py:352] - 服务器启动失败: [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\flight_ticket_mcp_server\main.py", line 320, in run_server
+    mcp.run()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\fastmcp\server\server.py", line 378, in run
+    anyio.run(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\anyio\_core\_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\anyio\_backends\_asyncio.py", line 2316, in run
+    return runner.run(wrapper())
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\anyio\_backends\_asyncio.py", line 2304, in wrapper
+    return await func(*args)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\fastmcp\server\server.py", line 353, in run_async
+    await self.run_stdio_async(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\fastmcp\server\server.py", line 1487, in run_stdio_async
+    log_server_banner(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\fastmcp\utilities\cli.py", line 235, in log_server_banner
+    console.print(Group("\n", panel, "\n"))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\rich\console.py", line 1697, in print
+    with self:
+         ^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\rich\console.py", line 870, in __exit__
+    self._exit_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\rich\console.py", line 826, in _exit_buffer
+    self._check_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\rich\console.py", line 2038, in _check_buffer
+    self._write_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\rich\console.py", line 2074, in _write_buffer
+    legacy_windows_render(buffer, LegacyWindowsTerm(self.file))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\rich\_windows_renderer.py", line 19, in legacy_windows_render
+    term.write_text(text)
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\RxPLMZbmpL_0WmieOQQCx\Lib\site-packages\rich\_win32_console.py", line 402, in write_text
+    self.write(text)
+OSError: [Errno 9] Bad file descriptor
+2025-09-11 21:40:26,333 - root - INFO - [main.py:201] - Flight Ticket MCP Server logging initialized - Level: INFO, Debug: False
+2025-09-11 21:40:26,333 - root - INFO - [main.py:202] - Log files location: C:\Users\31313\Desktop\2025ShortSemesterProject\logs
+2025-09-11 21:40:26,333 - root - INFO - [main.py:203] - Log configuration - Max size: 10MB, Backup count: 5
+2025-09-11 21:40:26,333 - flight_ticket_mcp_server.main - INFO - [main.py:309] - Flight Ticket MCP Server 启动中... 传输协议: stdio
+2025-09-11 21:40:26,333 - flight_ticket_mcp_server.main - INFO - [main.py:216] - 开始注册MCP工具...
+2025-09-11 21:40:26,338 - flight_ticket_mcp_server.main - INFO - [main.py:285] - MCP工具注册完成 - 已注册工具: searchFlightRoutes, getCurrentDate, getTransferFlightsByThreePlace, getWeatherByLocation, getWeatherByCity, getFlightInfo, getFlightStatus, getAirportFlights, getFlightsInArea, trackMultipleFlights
+2025-09-11 21:40:26,338 - flight_ticket_mcp_server.main - INFO - [main.py:314] - 所有工具注册成功
+2025-09-11 21:40:26,338 - flight_ticket_mcp_server.main - INFO - [main.py:319] - 启动stdio传输协议...
+2025-09-11 21:40:26,372 - flight_ticket_mcp_server.main - ERROR - [main.py:352] - 服务器启动失败: [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\flight_ticket_mcp_server\main.py", line 320, in run_server
+    mcp.run()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\fastmcp\server\server.py", line 378, in run
+    anyio.run(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\anyio\_core\_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\anyio\_backends\_asyncio.py", line 2316, in run
+    return runner.run(wrapper())
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Roaming\uv\python\cpython-3.12.11-windows-x86_64-none\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\anyio\_backends\_asyncio.py", line 2304, in wrapper
+    return await func(*args)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\fastmcp\server\server.py", line 353, in run_async
+    await self.run_stdio_async(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\fastmcp\server\server.py", line 1487, in run_stdio_async
+    log_server_banner(
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\fastmcp\utilities\cli.py", line 235, in log_server_banner
+    console.print(Group("\n", panel, "\n"))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\rich\console.py", line 1697, in print
+    with self:
+         ^^^^
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\rich\console.py", line 870, in __exit__
+    self._exit_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\rich\console.py", line 826, in _exit_buffer
+    self._check_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\rich\console.py", line 2038, in _check_buffer
+    self._write_buffer()
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\rich\console.py", line 2074, in _write_buffer
+    legacy_windows_render(buffer, LegacyWindowsTerm(self.file))
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\rich\_windows_renderer.py", line 19, in legacy_windows_render
+    term.write_text(text)
+  File "C:\Users\31313\AppData\Local\uv\cache\archive-v0\ZgzftPV5XTpdcHeoYwZP1\Lib\site-packages\rich\_win32_console.py", line 402, in write_text
+    self.write(text)
+OSError: [Errno 9] Bad file descriptor
