@@ -106,7 +106,7 @@ def search_google_maps(query: str, location: str = None, max_results: int = 5) -
     # 获取 Apify API token
     try:
         # 初始化 ApifyClient
-        client = ApifyClient("apify_api_ygFVwzfxBG8h4oUptQtQfi27bihbpi31nJb8")
+        client = ApifyClient(APIFY_API_1)
         
         # 准备 Actor 输入
         run_input = {
@@ -182,7 +182,7 @@ def search_weather(location: str, time_frame: str = "today", units: str = "metri
     
     try:
         # 初始化 ApifyClient
-        client = ApifyClient("apify_api_Afc2wYmECLAAY7q1cDq5pNUUtR7zUA3vS1hz")
+        client = ApifyClient(APIFY_API_2)
 
         # 准备 Actor 输入
         run_input = {
@@ -239,7 +239,7 @@ def search_flights(
     """
 
     try:
-        client = ApifyClient("apify_api_ySs6ZKWEBaQ4WdvOv9C4uCjmV00iAM19nX9s")
+        client = ApifyClient(APIFY_API_3)
 
         run_input = {
             "market": market,
